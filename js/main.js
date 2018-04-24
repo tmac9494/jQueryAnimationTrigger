@@ -136,7 +136,7 @@ $(document).ready(function() {
 	//set offset values from top of document on animation targets
 	function tSetOffsetAttribute(query) {
 		$(query).each(function() {
-			$(this).attr('data-offset', Math.floor($(this).offset().top - $windowHalfMark));	
+			$(this).attr('data-offset', Math.floor($(this).offset().top - $animationThresh));	
 		});
 	}
 	//if div offset value meets threshold - apply css animation
@@ -151,7 +151,7 @@ $(document).ready(function() {
 	//active code:
 
 	//threshold for animations to fire relative to screen height
-	$windowHalfMark = $(window).height() / 1.1;
+	$animationThresh = $(window).height() / 1.1;
 	$animationTargets = '';
 	//create list of selectors from animation object targets
 	$.each($tAnimationItems, function(i,object) {
@@ -173,14 +173,6 @@ $(document).ready(function() {
 	$(document).scroll(function() {
 	//set window position
 	$tWindowPosition = Math.floor($(document).scrollTop());
-		//change-header on scroll
-		if ($tWindowPosition > 0) {
-			$('.row-nav').addClass('scrolled-row-nav');
-			$('header').addClass('scrolled-header');
-		} else {
-			$('header').removeClass('scrolled-header');
-			$('.row-nav').removeClass('scrolled-row-nav');
-		}
-		tRunAnimations();
+	tRunAnimations();
 	});
 });
