@@ -31,36 +31,6 @@ $(document).ready(function() {
 		//  };
 		{
 			responsive: true,
-			target: '.fancy-bar',
-			animation: 'widen',
-			speed: '.75s',
-			delay: null,
-		},
-		{
-			responsive: true,
-			target: '.fancy-underline',
-			animation: 'line-widen',
-			speed: '.75s',
-			cssTiming: 'ease-out',
-			delay: null,
-		},
-		{
-			responsive: true,
-			target: '.fancy-line',
-			animation: 'tallen',
-			speed: '.75s',
-			cssTiming: 'ease-out',
-			delay: null,
-		},
-		{
-			responsive: true,
-			target: '.bouncy-img',
-			animation: 'bouncy',
-			speed: '.95s',
-			delay: null,
-		},
-		{
-			responsive: true,
 			target: '.t-fade-in:not(.slider-fade-in)',
 			animation:'tDopeFade',
 			speed: null,
